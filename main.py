@@ -11,14 +11,16 @@ def pic_compress(k, pic_array):
     return new_pic, size
 
 
-img = Image.open(r"test2.jpg")
+img = Image.open(r"test1.png")
 ori_img = np.array(img)
-new_img, size = pic_compress(30, ori_img)
-print("original size:" + str(ori_img.shape[0] * ori_img.shape[1]))
-print("compress size:" + str(size))
-fig, ax = plt.subplots(1, 2)
-ax[0].imshow(ori_img)
-ax[0].set_title("before compress")
-ax[1].imshow(new_img)
-ax[1].set_title("after compress")
+fig, ax = plt.subplots(1, 6)
+for i in range(1,6):
+    new_img, size = pic_compress(5*i, ori_img)
+    print("original size:" + str(ori_img.shape[0] * ori_img.shape[1]))
+    print("compress size:" + str(size))
+    
+    ax[0].imshow(ori_img)
+    ax[0].set_title("initial image")
+    ax[i].imshow(new_img)
+    ax[i].set_title("%d "%(i))
 plt.show()
