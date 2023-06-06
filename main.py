@@ -22,5 +22,5 @@ for i in range(1,6):
     ax[0].imshow(ori_img)
     ax[0].set_title("initial image")
     ax[i].imshow(new_img)
-    ax[i].set_title("%d "%(i))
+    ax[i].set_title("%d "%(5*i))
 plt.show()
