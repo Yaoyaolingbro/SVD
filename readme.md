@@ -1,5 +1,5 @@
 # README
-本仓库用于一个通识课的作业，其内容为使用python采用PCA策略实现对图像的压缩。
+simple SVD for image compression 本仓库是ZJU 控制论课程上pre使用numpy和matplotlib实现对一个图像的奇异值分解，实现大小上的压缩。 但总得来说这个算法是十分慢的，也仅仅是对SVD的一个展示。
 
 ## How to use
 ```shell
@@ -9,4 +9,4 @@ pip install -r requirement.txt
 conda install --file requirements.txt
 ```
 
-然后运行main.py就可以啦
+然后运行main.py就可以啦！
